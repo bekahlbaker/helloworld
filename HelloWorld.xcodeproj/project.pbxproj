@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A6B20A332BF002B6907 /* AppDelegate.swift */; };
-		270B7A6E20A332BF002B6907 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A6D20A332BF002B6907 /* ViewController.swift */; };
 		270B7A7120A332BF002B6907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A6F20A332BF002B6907 /* Main.storyboard */; };
 		270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A7220A332BF002B6907 /* HelloWorld.xcdatamodeld */; };
 		270B7A7620A332C2002B6907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7520A332C2002B6907 /* Assets.xcassets */; };
 		270B7A7920A332C2002B6907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */; };
+		270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A8320A33A30002B6907 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		270B7A6820A332BF002B6907 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		270B7A6B20A332BF002B6907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		270B7A6D20A332BF002B6907 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		270B7A7020A332BF002B6907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		270B7A7320A332BF002B6907 /* HelloWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HelloWorld.xcdatamodel; sourceTree = "<group>"; };
 		270B7A7520A332C2002B6907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		270B7A7820A332C2002B6907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		270B7A7A20A332C2002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		270B7A8320A33A30002B6907 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,10 @@
 		270B7A6A20A332BF002B6907 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				270B7A8220A33A0C002B6907 /* Model */,
+				270B7A8120A33A05002B6907 /* View */,
+				270B7A8020A339F6002B6907 /* Controller */,
 				270B7A6B20A332BF002B6907 /* AppDelegate.swift */,
-				270B7A6D20A332BF002B6907 /* ViewController.swift */,
 				270B7A6F20A332BF002B6907 /* Main.storyboard */,
 				270B7A7520A332C2002B6907 /* Assets.xcassets */,
 				270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */,
@@ -65,6 +67,28 @@
 				270B7A7220A332BF002B6907 /* HelloWorld.xcdatamodeld */,
 			);
 			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		270B7A8020A339F6002B6907 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				270B7A8320A33A30002B6907 /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		270B7A8120A33A05002B6907 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		270B7A8220A33A0C002B6907 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */,
-				270B7A6E20A332BF002B6907 /* ViewController.swift in Sources */,
 				270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */,
+				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
