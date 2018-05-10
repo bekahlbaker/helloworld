@@ -49,7 +49,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf6-po-pBv">
                                         <rect key="frame" x="80.5" y="126" width="150" height="30"/>
@@ -79,7 +79,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +111,7 @@
                     <connections>
                         <outlet property="error" destination="42a-m4-tpI" id="QmX-DL-9Ij"/>
                         <outlet property="go" destination="Jf6-po-pBv" id="ERJ-I0-8ig"/>
+                        <outlet property="loginView" destination="X4B-QU-7Ez" id="e4j-lY-aZe"/>
                         <outlet property="passwordTextfield" destination="Hl9-un-ZmN" id="93T-na-Dya"/>
                         <outlet property="usernameTextfield" destination="HJn-7w-N30" id="anK-dL-qI2"/>
                     </connections>
