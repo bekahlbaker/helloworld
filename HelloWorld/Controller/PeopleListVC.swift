@@ -13,6 +13,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var tableview: UITableView!
     
     var peopleList: [User] = []
+    var selectedPersonsName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,20 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             return cell
         }
         return PeopleCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let person = self.peopleList[indexPath.row]
+        selectedPersonsName = person.name
+        performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let vc = segue.destination as? DetailVC {
+             vc.chatWith = selectedPersonsName
+            }
+        }
     }
 
 }

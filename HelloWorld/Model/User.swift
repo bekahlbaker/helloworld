@@ -14,7 +14,7 @@ class User {
     var name: String
     var imageUrl: String
     
-    init(_ name: String, _ imageUrl: String = "") {
+    init(_ name: String = "", _ imageUrl: String = "") {
         self.name = name
         self.imageUrl = imageUrl
     }

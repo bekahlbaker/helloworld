@@ -23,6 +23,8 @@
 		27774EA720A4C8A700E82D96 /* MessageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA620A4C8A700E82D96 /* MessageListVC.swift */; };
 		27774EA920A4CFBF00E82D96 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA820A4CFBF00E82D96 /* PeopleCell.swift */; };
 		27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */; };
+		27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAE20A4DC8600E82D96 /* MessageCell.swift */; };
+		27774EB120A4DD2700E82D96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB020A4DD2700E82D96 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		27774EA620A4C8A700E82D96 /* MessageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVC.swift; sourceTree = "<group>"; };
 		27774EA820A4CFBF00E82D96 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		27774EAE20A4DC8600E82D96 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		27774EB020A4DD2700E82D96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				270B7AE320A48991002B6907 /* RoundedButton.swift */,
 				27774EA820A4CFBF00E82D96 /* PeopleCell.swift */,
 				27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */,
+				27774EAE20A4DC8600E82D96 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				270B7B0820A4B1FA002B6907 /* User.swift */,
+				27774EB020A4DD2700E82D96 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,9 +318,11 @@
 				27774EA920A4CFBF00E82D96 /* PeopleCell.swift in Sources */,
 				27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */,
 				270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */,
+				27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */,
 				270B7B0920A4B1FA002B6907 /* User.swift in Sources */,
 				270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */,
 				270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */,
+				27774EB120A4DD2700E82D96 /* Message.swift in Sources */,
 				27774EA320A4C46800E82D96 /* DetailVC.swift in Sources */,
 				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,
 				27774EA520A4C88D00E82D96 /* PeopleListVC.swift in Sources */,

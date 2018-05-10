@@ -9,10 +9,18 @@
 import UIKit
 
 class DetailVC: UIViewController {
+    
+    var chatWith: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.title = chatWith
     }
 
 }
