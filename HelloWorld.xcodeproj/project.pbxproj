@@ -16,6 +16,7 @@
 		270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE120A488EB002B6907 /* ShadowView.swift */; };
 		270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE320A48991002B6907 /* RoundedButton.swift */; };
 		270B7AEC20A48A57002B6907 /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */; };
+		270B7B0920A4B1FA002B6907 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7B0820A4B1FA002B6907 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		270B7AE920A48A57002B6907 /* HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldUITests.swift; sourceTree = "<group>"; };
 		270B7AED20A48A57002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		270B7B0820A4B1FA002B6907 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		270B7A8220A33A0C002B6907 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				270B7B0820A4B1FA002B6907 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */,
 				270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */,
+				270B7B0920A4B1FA002B6907 /* User.swift in Sources */,
 				270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */,
 				270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */,
 				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,

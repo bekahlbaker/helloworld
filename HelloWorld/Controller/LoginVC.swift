@@ -23,6 +23,8 @@ class LoginVC: UIViewController {
             if checkIfLoginCredentialsAreValid(username, password) {
                 setErrorText()
                 clearLoginView()
+                let user = User(username: username)
+                print("New User created ", user)
             } else {
                setErrorText(to: "Please enter your login credentials")
             }
