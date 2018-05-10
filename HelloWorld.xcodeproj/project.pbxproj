@@ -13,7 +13,20 @@
 		270B7A7620A332C2002B6907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7520A332C2002B6907 /* Assets.xcassets */; };
 		270B7A7920A332C2002B6907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */; };
 		270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A8320A33A30002B6907 /* LoginVC.swift */; };
+		270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE120A488EB002B6907 /* ShadowView.swift */; };
+		270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE320A48991002B6907 /* RoundedButton.swift */; };
+		270B7AEC20A48A57002B6907 /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		270B7AEE20A48A57002B6907 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270B7A6020A332BF002B6907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 270B7A6720A332BF002B6907;
+			remoteInfo = HelloWorld;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		270B7A6820A332BF002B6907 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,22 @@
 		270B7A7820A332C2002B6907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		270B7A7A20A332C2002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270B7A8320A33A30002B6907 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		270B7AE120A488EB002B6907 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		270B7AE320A48991002B6907 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		270B7AE920A48A57002B6907 /* HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldUITests.swift; sourceTree = "<group>"; };
+		270B7AED20A48A57002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		270B7A6520A332BF002B6907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270B7AE620A48A57002B6907 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				270B7A6A20A332BF002B6907 /* HelloWorld */,
+				270B7AEA20A48A57002B6907 /* HelloWorldUITests */,
 				270B7A6920A332BF002B6907 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				270B7A6820A332BF002B6907 /* HelloWorld.app */,
+				270B7AE920A48A57002B6907 /* HelloWorldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +107,8 @@
 		270B7A8120A33A05002B6907 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				270B7AE120A488EB002B6907 /* ShadowView.swift */,
+				270B7AE320A48991002B6907 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +118,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		270B7AEA20A48A57002B6907 /* HelloWorldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */,
+				270B7AED20A48A57002B6907 /* Info.plist */,
+			);
+			path = HelloWorldUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +149,24 @@
 			productReference = 270B7A6820A332BF002B6907 /* HelloWorld.app */;
 			productType = "com.apple.product-type.application";
 		};
+		270B7AE820A48A57002B6907 /* HelloWorldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270B7AF020A48A57002B6907 /* Build configuration list for PBXNativeTarget "HelloWorldUITests" */;
+			buildPhases = (
+				270B7AE520A48A57002B6907 /* Sources */,
+				270B7AE620A48A57002B6907 /* Frameworks */,
+				270B7AE720A48A57002B6907 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				270B7AEF20A48A57002B6907 /* PBXTargetDependency */,
+			);
+			name = HelloWorldUITests;
+			productName = HelloWorldUITests;
+			productReference = 270B7AE920A48A57002B6907 /* HelloWorldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,6 +179,10 @@
 				TargetAttributes = {
 					270B7A6720A332BF002B6907 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					270B7AE820A48A57002B6907 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 270B7A6720A332BF002B6907;
 					};
 				};
 			};
@@ -140,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				270B7A6720A332BF002B6907 /* HelloWorld */,
+				270B7AE820A48A57002B6907 /* HelloWorldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		270B7AE720A48A57002B6907 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -162,13 +230,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */,
+				270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */,
 				270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */,
 				270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */,
 				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		270B7AE520A48A57002B6907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270B7AEC20A48A57002B6907 /* HelloWorldUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		270B7AEF20A48A57002B6907 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 270B7A6720A332BF002B6907 /* HelloWorld */;
+			targetProxy = 270B7AEE20A48A57002B6907 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		270B7A6F20A332BF002B6907 /* Main.storyboard */ = {
@@ -340,6 +426,44 @@
 			};
 			name = Release;
 		};
+		270B7AF120A48A57002B6907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q455MXT946;
+				INFOPLIST_FILE = HelloWorldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekahbaker.HelloWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloWorld;
+			};
+			name = Debug;
+		};
+		270B7AF220A48A57002B6907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q455MXT946;
+				INFOPLIST_FILE = HelloWorldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekahbaker.HelloWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloWorld;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +481,15 @@
 			buildConfigurations = (
 				270B7A7E20A332C2002B6907 /* Debug */,
 				270B7A7F20A332C2002B6907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		270B7AF020A48A57002B6907 /* Build configuration list for PBXNativeTarget "HelloWorldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270B7AF120A48A57002B6907 /* Debug */,
+				270B7AF220A48A57002B6907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
