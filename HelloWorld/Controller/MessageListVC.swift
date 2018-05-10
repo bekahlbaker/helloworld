@@ -22,9 +22,9 @@ class MessageListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         tableview.delegate = self
         tableview.dataSource = self
         
-        messageList.append(Message("Hello, how are you?"))
-        messageList.append(Message("Wanna get some lunch?"))
-        messageList.append(Message("Let's go see a movie!"))
+        messageList.append(Message("Hello, how are you?", "a day ago"))
+        messageList.append(Message("Wanna get some lunch?", "3 days ago"))
+        messageList.append(Message("Let's go see a movie!", "30 min ago"))
 
     }
     

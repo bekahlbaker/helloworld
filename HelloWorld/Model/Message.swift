@@ -11,10 +11,12 @@ import Foundation
 class Message {
     
     var content: String
+    var timestamp: String
     var user = User()
     
-    init(_ content: String) {
+    init(_ content: String, _ timestamp: String) {
         self.content = content
+        self.timestamp = timestamp
     }
     
     func getUser(_ byId: Int) -> User {

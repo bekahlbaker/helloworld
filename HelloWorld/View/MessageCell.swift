@@ -12,6 +12,7 @@ class MessageCell: UITableViewCell {
     
     @IBOutlet weak var avatar: AvatarImageView!
     @IBOutlet weak var body: UILabel!
+    @IBOutlet weak var timestamp: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,7 @@ class MessageCell: UITableViewCell {
 
     func configureMessageCell(_ message: Message) -> Void {
         body.text = message.content
+        timestamp.text = message.timestamp
     }
     
     // Set up Kingfisher or something to cache images
