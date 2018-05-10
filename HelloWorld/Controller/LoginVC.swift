@@ -23,12 +23,15 @@ class LoginVC: UIViewController {
             if checkIfLoginCredentialsAreValid(username, password) {
                 setErrorText()
                 clearLoginView()
-                let user = User(username: username)
-                print("New User created ", user)
+                performSegue(withIdentifier: "toMain", sender: self)
             } else {
                setErrorText(to: "Please enter your login credentials")
             }
         }
+    }
+    @IBAction func signInWithFacebook(_ sender: Any) {
+        // Perform Facebook Authentication
+        performSegue(withIdentifier: "toMain", sender: self)
     }
     
     override func viewDidLoad() {
@@ -54,5 +57,11 @@ class LoginVC: UIViewController {
         loginView.alpha = 0
         usernameTextfield.text = ""
         passwordTextfield.text = ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMain" {
+            
+        }
     }
 }

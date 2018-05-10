@@ -11,10 +11,12 @@ import UIKit
 
 class User {
     
-    var username: String
+    var name: String
+    var imageUrl: String
     
-    init(username: String) {
-        self.username = username
+    init(_ name: String, _ imageUrl: String = "") {
+        self.name = name
+        self.imageUrl = imageUrl
     }
         
 }
