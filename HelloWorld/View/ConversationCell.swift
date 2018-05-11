@@ -1,14 +1,14 @@
 //
-//  MessageCell.swift
+//  ConversationCell.swift
 //  HelloWorld
 //
-//  Created by Rebekah Baker on 5/10/18.
+//  Created by Rebekah Baker on 5/11/18.
 //  Copyright © 2018 Bekah Baker. All rights reserved.
 //
 
 import UIKit
 
-class MessageCell: UITableViewCell {
+class ConversationCell: UITableViewCell {
     
     @IBOutlet weak var avatar: AvatarImageView!
     @IBOutlet weak var body: UILabel!
@@ -18,9 +18,10 @@ class MessageCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    func configureMessageCell(_ message: Message) -> Void {
-        body.text = message.content
+    
+    func configureConversationCell(_ conversation: Conversation) -> Void {
+        let mostRecentMessage = conversation.messages.count - 1
+        body.text = conversation.messages[mostRecentMessage].content
 //        timestamp.text = message.timestamp
     }
     
@@ -38,5 +39,5 @@ class MessageCell: UITableViewCell {
             }
         }
     }
-
+    
 }

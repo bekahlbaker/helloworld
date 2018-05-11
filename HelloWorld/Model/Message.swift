@@ -10,29 +10,30 @@ import Foundation
 
 class Message {
     
-    var content: String
-    var timestamp: String
-    var user = User()
+    var content: String!
+    var timestamp: Date!
+    var userId: Int!
+    var conversationId: Int!
     
-    init(_ content: String, _ timestamp: String) {
+    init(content: String, timestamp: Date, userId: Int, conversationId: Int) {
         self.content = content
         self.timestamp = timestamp
+        self.userId = userId
+        self.conversationId = conversationId
     }
     
-    func getUser(_ byId: Int) -> User {
-        // Set up call to retreive user by Id
-        switch byId {
-        case 1:
-            let user1 = User("John Doe", "https://cdn.gratisography.com/photos/442H.jpg")
-            self.user = user1
-            return user1
-        case 2:
-            let user2 = User("Jane Doe", "https://cdn.gratisography.com/photos/437H.jpg")
-            self.user = user2
-            return user2
-        default:
-            return User("", "")
+    init(_ messageData: [String: Any]) {
+        if let content = messageData["content"] as? String {
+            self.content = content
+        }
+        if let timestamp = messageData["timestamp"] as? Date {
+            self.timestamp = timestamp
+        }
+        if let userId = messageData["userId"] as? Int {
+            self.userId = userId
+        }
+        if let conversationId = messageData["conversationId"] as? Int {
+            self.conversationId = conversationId
         }
     }
-    
 }

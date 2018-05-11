@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
+class MessageVC: UIViewController {
     
     var chatWith: String!
 

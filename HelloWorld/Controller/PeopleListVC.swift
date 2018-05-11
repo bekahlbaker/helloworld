@@ -20,10 +20,10 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         tableview.delegate = self
         tableview.dataSource = self
-
-        peopleList.append(User("Sara Jones", "https://cdn.gratisography.com/photos/424H.jpg"))
-        peopleList.append(User("Benjamin Williams", "https://cdn.gratisography.com/photos/196H.jpg"))
-        peopleList.append(User("Ostrich", "https://cdn.gratisography.com/photos/16H.jpg"))
+//
+//        peopleList.append(User("Sara Jones", "https://cdn.gratisography.com/photos/424H.jpg"))
+//        peopleList.append(User("Benjamin Williams", "https://cdn.gratisography.com/photos/196H.jpg"))
+//        peopleList.append(User("Ostrich", "https://cdn.gratisography.com/photos/16H.jpg"))
         tableview.reloadData()
     }
     
@@ -52,7 +52,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            if let vc = segue.destination as? DetailVC {
+            if let vc = segue.destination as? MessageVC {
              vc.chatWith = selectedPersonsName
             }
         }
