@@ -11,6 +11,7 @@ import UIKit
 class MessageVC: UIViewController {
     
     var chatWith: String!
+    var passedConversation: Conversation!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -48,7 +48,7 @@ class ConversationCell: UITableViewCell {
         let mostRecentMsg = conversation.messages[mostRecentMsgIndex]
         let otherUser = getOtherUser(conversation.users)
         body.text = mostRecentMsg.content
-        timestamp.text = configureDate(mostRecentMsg.timestamp)
+        timestamp.text = mostRecentMsg.timestamp.timeAgoDisplay()
         let url = URL(string: otherUser.imageUrl)!
         avatar.kf.setImage(with: url)
     }

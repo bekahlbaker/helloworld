@@ -14,6 +14,7 @@ class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDe
     
     var conversations = [Conversation]()
     var selectedPersonsName: String!
+    var selectedConversation: Conversation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +40,27 @@ class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDe
         {
             let conversationAtIndex = self.conversations[indexPath.row]
             cell.configureConversationCell(with: conversationAtIndex)
-//            let user = message.getUser(1)
-//            cell.loadImage(user.imageUrl)
-
             return cell
         }
         return ConversationCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetail", sender: self)
+        selectedConversation = self.conversations[indexPath.row]
+        if let cell: ConversationCell = tableView.cellForRow(at: indexPath) as? ConversationCell {
+            if let users = self.conversations[indexPath.row].users {
+                let person = cell.getOtherUser(users)
+                selectedPersonsName = person.name
+                performSegue(withIdentifier: "toDetail", sender: self)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             if let vc = segue.destination as? MessageVC {
                 vc.chatWith = selectedPersonsName
+                vc.passedConversation = selectedConversation
             }
         }
     }

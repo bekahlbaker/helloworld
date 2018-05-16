@@ -58,21 +58,21 @@ class FakeData {
                         [
                             "id": 1,
                             "content": "It's absolutely yanny!",
-                            "timestamp": Date(),
+                            "timestamp": Date() - 3000,
                             "userId": 1,
                             "conversationId": 1
                         ],
                         [
                             "id": 2,
                             "content": "No way! Laurel for sure",
-                            "timestamp": Date() + 1,
+                            "timestamp": Date() - 2000,
                             "userId": 2,
                             "conversationId": 1
                         ],
                         [
                             "id": 3,
                             "content": "You're insane.",
-                            "timestamp": Date() + 2,
+                            "timestamp": Date() - 1000,
                             "userId": 1,
                             "conversationId": 1
                         ],

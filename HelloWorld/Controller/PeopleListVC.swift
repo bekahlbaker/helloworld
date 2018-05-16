@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
@@ -21,6 +21,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         tableview.delegate = self
         tableview.dataSource = self
+        searchbar.delegate = self
 
         for person in FakeData.people {
             peopleList.append(User(person))
@@ -52,6 +53,19 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         performSegue(withIdentifier: "toDetail", sender: self)
     }
     
+    //MARK: Searchbar
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Searching", searchText)
+        // make API call to search - throttle
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        searchBar.text = ""
+        // make API call to search
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             if let vc = segue.destination as? MessageVC {
@@ -59,5 +73,4 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
     }
-
 }
