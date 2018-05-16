@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ConversationCell: UITableViewCell {
     
@@ -19,25 +20,37 @@ class ConversationCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureConversationCell(_ conversation: Conversation) -> Void {
-        let mostRecentMessage = conversation.messages.count - 1
-        body.text = conversation.messages[mostRecentMessage].content
-//        timestamp.text = message.timestamp
+    func configureDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date / server String
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let myString = formatter.string(from: Date()) // string purpose I add here
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "MMM dd yyyy"
+        // again convert your date to string
+        let myStringafd = formatter.string(from: yourDate!)
+        
+        print(myStringafd)
+        return myStringafd
     }
     
-    // Set up Kingfisher or something to cache images
-    func loadImage(_ url: String) {
-        DispatchQueue.global().async { [weak self] in
-            if let imageUrl = URL(string: url) {
-                if let data = try? Data(contentsOf: imageUrl) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.avatar.image = image
-                        }
-                    }
-                }
-            }
-        }
+    func getOtherUser(_ users: [User]) -> User {
+        let notCurrentUserArr = users.filter{$0.id != CurrentUser.id}
+        print(notCurrentUserArr[0].name)
+        return notCurrentUserArr[0]
+    }
+
+    func configureConversationCell(with conversation: Conversation) -> Void {
+        let mostRecentMsgIndex = conversation.messages.count - 1
+        let mostRecentMsg = conversation.messages[mostRecentMsgIndex]
+        let otherUser = getOtherUser(conversation.users)
+        body.text = mostRecentMsg.content
+        timestamp.text = configureDate(mostRecentMsg.timestamp)
+        let url = URL(string: otherUser.imageUrl)!
+        avatar.kf.setImage(with: url)
     }
     
 }

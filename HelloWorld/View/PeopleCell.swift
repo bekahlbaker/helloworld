@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PeopleCell: UITableViewCell {
     
@@ -21,22 +22,7 @@ class PeopleCell: UITableViewCell {
 
     func configurePersonCell(_ user: User) -> Void {
         name.text = user.name
-        loadImage(user.imageUrl)
+        let url = URL(string: user.imageUrl)!
+        avatar.kf.setImage(with: url)
     }
-    
-    // Set up Kingfisher or something to cache images
-    func loadImage(_ url: String) {
-        DispatchQueue.global().async { [weak self] in
-            if let imageUrl = URL(string: url) {
-                if let data = try? Data(contentsOf: imageUrl) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.avatar.image = image
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }

@@ -15,9 +15,6 @@ class API {
         if let convArray = data["conversation"] as? [String: Any] {
             for c in convArray {
                 print("Conversation", c)
-                if let messages = c["messages"] as? [String: Any], let users = c["users"] as? [String: Any] {
-                    let newConv = Conversation(messages, users)
-                }
             }
         }
         return arr

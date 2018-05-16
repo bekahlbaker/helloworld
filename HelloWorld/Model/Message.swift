@@ -9,13 +9,14 @@
 import Foundation
 
 class Message {
-    
+    var id: Int!
     var content: String!
     var timestamp: Date!
     var userId: Int!
     var conversationId: Int!
     
-    init(content: String, timestamp: Date, userId: Int, conversationId: Int) {
+    init(content: String, timestamp: Date, userId: Int, conversationId: Int, id: Int) {
+        self.id = id
         self.content = content
         self.timestamp = timestamp
         self.userId = userId
@@ -23,6 +24,9 @@ class Message {
     }
     
     init(_ messageData: [String: Any]) {
+        if let id = messageData["id"] as? Int {
+            self.id = id
+        }
         if let content = messageData["content"] as? String {
             self.content = content
         }

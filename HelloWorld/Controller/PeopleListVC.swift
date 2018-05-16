@@ -11,6 +11,7 @@ import UIKit
 class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var searchbar: UISearchBar!
     
     var peopleList: [User] = []
     var selectedPersonsName: String!
@@ -20,10 +21,11 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         tableview.delegate = self
         tableview.dataSource = self
-//
-//        peopleList.append(User("Sara Jones", "https://cdn.gratisography.com/photos/424H.jpg"))
-//        peopleList.append(User("Benjamin Williams", "https://cdn.gratisography.com/photos/196H.jpg"))
-//        peopleList.append(User("Ostrich", "https://cdn.gratisography.com/photos/16H.jpg"))
+
+        for person in FakeData.people {
+            peopleList.append(User(person))
+        }
+        
         tableview.reloadData()
     }
     

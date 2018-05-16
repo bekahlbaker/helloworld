@@ -30,8 +30,8 @@ class Login {
         // On failure, return an error
         let loginSuccessful = true
         let json = [
-            "id": 2,
-            "name": "Sam Baker",
+            "id": 1,
+            "name": "Sam McCrackin",
             "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
             ] as [String : Any]
         let newUser = User(json)

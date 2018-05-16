@@ -9,37 +9,6 @@
 import UIKit
 
 class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    let json = [
-        "conversation": [
-            "messages" : [
-                [
-                    "content": "Some message",
-                    "userId": 3,
-                    "timestamp": Date(),
-                    "conversationId": 2
-                ],
-                [
-                    "content": "Some other messsage",
-                    "userId": 5,
-                    "timestamp": Date(),
-                    "conversationId": 2
-                ]
-            ],
-            "users": [
-                [
-                    "id": 3,
-                    "name": "Sam",
-                    "imageUrl": "None"
-                ],
-                [
-                    "id": 5,
-                    "name": "Jack",
-                    "imageUrl": "Image"
-                ]
-            ]
-        ]
-        ] as [String : Any]
  
     @IBOutlet weak var tableview: UITableView!
     
@@ -52,8 +21,10 @@ class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDe
         tableview.delegate = self
         tableview.dataSource = self
         
-        self.conversations = API.getConversations(json)
-        print(conversations)
+        for conversation in FakeData.conversation {
+            conversations.append(Conversation(conversation))
+        }
+        print(conversations.count)
     }
     
     //MARK: Tableview
@@ -66,14 +37,14 @@ class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDe
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ConversationCell") as? ConversationCell
         {
-            let conversation = self.conversations[indexPath.row]
-            cell.configureConversationCell(conversation)
+            let conversationAtIndex = self.conversations[indexPath.row]
+            cell.configureConversationCell(with: conversationAtIndex)
 //            let user = message.getUser(1)
 //            cell.loadImage(user.imageUrl)
-            
+
             return cell
         }
-        return PeopleCell()
+        return ConversationCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
