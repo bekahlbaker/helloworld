@@ -10,7 +10,7 @@ import Foundation
 
 /*
  Build protocol for an endpoint:
-    Model is the model you expect to be returned from the API at that endpoint
+    BaseURL is the base
     Path is the specific path of endpoint
     FullUrl combines base and path
     Method is HTTPRequest Method ie. GET, PUT, DELETE
@@ -18,13 +18,12 @@ import Foundation
 */
 
 protocol APIEndpoint {
-//    associatedtype Model
+    var baseURL: String { get }
     var path: String { get }
     var fullURL: String { get }
     var method: String { get }
     // add method/parameters/encoding/headers
-    
-    func makeModel(data: Data) -> AnyObject?
+
 }
 
 extension APIEndpoint {
@@ -40,33 +39,18 @@ extension APIEndpoint {
 
 enum UserEndpoints {
     case getUsers(countOf: Int)
+    case loginWithFacebook
     // Could add additional user endpoints (login, get specific user, etc)
 }
 
 extension UserEndpoints: APIEndpoint {
-    func makeModel(data: Data) -> AnyObject? {
-        guard let result = try? JSONDecoder().decode(User.self, from: data) else {
-            return nil
-        }
-        
-        return result as AnyObject
-    }
-    
-    
-//    typealias Model = User
-    
-//    func makeModel(data: Data) -> User? {
-//        guard let result = try? JSONDecoder().decode(User.self, from: data) else {
-//            return nil
-//        }
-//
-//        return result
-//    }
-    
+
     var path: String {
         switch self {
         case .getUsers(let countOf):
             return "?results=\(countOf)"
+        case .loginWithFacebook:
+            return "facebook"
         }
     }
     
@@ -74,6 +58,8 @@ extension UserEndpoints: APIEndpoint {
         switch self {
         case .getUsers:
             return "GET"
+        case .loginWithFacebook:
+            return "POST"
         }
     }
 }

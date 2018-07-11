@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /*
  Make request to specified endpoint and returns model specified by that endpoint
@@ -14,19 +15,29 @@ import Foundation
 
 class APIRequest {
     
-    static func makeRequestTo(endpoint: APIEndpoint, withCompletion completion: @escaping (AnyObject?) -> Void) {
+    // Request Collection, Request Object, Post, Delete, etc?
+    
+    static func makeRequestTo(endpoint: APIEndpoint, withCompletion completion: @escaping (Data?, Error?) -> Void) {
         guard let url = URL(string: endpoint.fullURL) else { return }
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
-            print("DATA ", data, "RESPONSE", response, "ERROR ", error)
-            guard let data = data else {
-                completion(nil)
+            
+            guard let _ = data else {
+                completion(nil, error)
                 return
             }
+            
+            let json = """
+        {
+            "id": 1,
+            "name": "Sam McCrackin",
+            "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
+        }
+        """.data(using: .utf8)!
 
-            let result = endpoint.makeModel(data: data)
-            completion(result)
+            completion(json, nil)
+
         })
         task.resume()
     }

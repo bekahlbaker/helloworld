@@ -36,25 +36,17 @@ class Login {
             "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
         }
         """.data(using: .utf8)!
-//        do {
-//            let newUser = try JSONDecoder().decode(User.self, from: json)
-//            print("NEW USER ", newUser)
-//            completion(newUser)
-//        } catch {
-//            print(error)
-//        }
-        
-//        if loginSuccessful {
-//            if let user = newUser {
-//             completion(user)
-//            }
-//        }
-        
-        APIRequest.makeRequestTo(endpoint: UserEndpoints.getUsers(countOf: 10)) { (response) in
-            if response != nil {
-                print(response)
+
+        APIRequest.makeRequestTo(endpoint: UserEndpoints.getUsers(countOf: 1)) { (data, error) in
+            if data != nil {
+                guard let dataReponse = data else { return }
+                
+                guard let newUser = try? JSONDecoder().decode(User.self, from: dataReponse) else { return }
+                
+                print("NEW USER ", newUser)
+                
             } else {
-                print("NOPE")
+                print("NOPE", error ?? "")
             }
         }
     }
