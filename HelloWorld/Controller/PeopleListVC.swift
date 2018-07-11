@@ -24,7 +24,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         searchbar.delegate = self
 
         for person in FakeData.people {
-            peopleList.append(User(person))
+//            peopleList.append(User(from: person as! Decoder))
         }
         
         tableview.reloadData()
@@ -51,6 +51,10 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let person = self.peopleList[indexPath.row]
         selectedPersonsName = person.name
         performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     //MARK: Searchbar

@@ -11,7 +11,7 @@ import Foundation
 class API {
     
     static func getConversations(_ data: [String: Any]) -> [Conversation] {
-        var arr = [Conversation]()
+        let arr = [Conversation]()
         if let convArray = data["conversation"] as? [String: Any] {
             for c in convArray {
                 print("Conversation", c)

@@ -28,16 +28,34 @@ class Login {
         // Make call to login on facebook
         // On success, return a user
         // On failure, return an error
-        let loginSuccessful = true
-        let json = [
+//        let loginSuccessful = true
+        let json = """
+        {
             "id": 1,
             "name": "Sam McCrackin",
             "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
-            ] as [String : Any]
-        let newUser = User(json)
+        }
+        """.data(using: .utf8)!
+//        do {
+//            let newUser = try JSONDecoder().decode(User.self, from: json)
+//            print("NEW USER ", newUser)
+//            completion(newUser)
+//        } catch {
+//            print(error)
+//        }
         
-        if loginSuccessful {
-            completion(newUser)
+//        if loginSuccessful {
+//            if let user = newUser {
+//             completion(user)
+//            }
+//        }
+        
+        APIRequest.makeRequestTo(endpoint: UserEndpoints.getUsers(countOf: 10)) { (response) in
+            if response != nil {
+                print(response)
+            } else {
+                print("NOPE")
+            }
         }
     }
     

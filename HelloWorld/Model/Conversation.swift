@@ -36,8 +36,8 @@ class Conversation {
                 if let convUsers = convo["users"] as? [[String: Any]] {
                     var mutableUsers = [User]()
                     for us in convUsers {
-                        let newUser = User(us)
-                        mutableUsers.append(newUser)
+//                        let newUser = User(from: us as! Decoder)
+//                        mutableUsers.append(newUser)
                     }
                     self.users = mutableUsers
                 }
