@@ -19,7 +19,6 @@
 		270B7AEC20A48A57002B6907 /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */; };
 		270B7B0920A4B1FA002B6907 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7B0820A4B1FA002B6907 /* User.swift */; };
 		2735ABB220A61414005BC8D9 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABB120A61414005BC8D9 /* Conversation.swift */; };
-		2735ABB720A6297C005BC8D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABB620A6297C005BC8D9 /* API.swift */; };
 		2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABCE20AC72D9005BC8D9 /* FakeData.swift */; };
 		2735ABD220ACA7B4005BC8D9 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */; };
 		27774E9920A4C00F00E82D96 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774E9820A4C00F00E82D96 /* HelloWorldTests.swift */; };
@@ -32,7 +31,6 @@
 		27774EB120A4DD2700E82D96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB020A4DD2700E82D96 /* Message.swift */; };
 		27774EB520A5F3BB00E82D96 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB420A5F3BB00E82D96 /* CurrentUser.swift */; };
 		27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB620A5F45300E82D96 /* ConversationCell.swift */; };
-		27774EBC20A5F88B00E82D96 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EBB20A5F88B00E82D96 /* Login.swift */; };
 		27838CF120F3F6CB006D3F47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */; };
 		27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CFC20F51275006D3F47 /* APIRequest.swift */; };
 		31580684746F0788C85E60BE /* Pods_HelloWorldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C225588DD0D9E06ECEFB1B8 /* Pods_HelloWorldUITests.framework */; };
@@ -75,7 +73,6 @@
 		270B7AED20A48A57002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270B7B0820A4B1FA002B6907 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2735ABB120A61414005BC8D9 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		2735ABB620A6297C005BC8D9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2735ABCE20AC72D9005BC8D9 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		27774E9620A4C00F00E82D96 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +87,6 @@
 		27774EB020A4DD2700E82D96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		27774EB420A5F3BB00E82D96 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		27774EB620A5F45300E82D96 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
-		27774EBB20A5F88B00E82D96 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		27838CFC20F51275006D3F47 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		2FBE42BACA2268E617AEF6F3 /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,8 +229,6 @@
 		27774EB820A5F78000E82D96 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				27774EBB20A5F88B00E82D96 /* Login.swift */,
-				2735ABB620A6297C005BC8D9 /* API.swift */,
 				2735ABCE20AC72D9005BC8D9 /* FakeData.swift */,
 			);
 			path = Services;
@@ -519,8 +513,6 @@
 				2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */,
 				27774EA520A4C88D00E82D96 /* PeopleListVC.swift in Sources */,
 				27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */,
-				2735ABB720A6297C005BC8D9 /* API.swift in Sources */,
-				27774EBC20A5F88B00E82D96 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

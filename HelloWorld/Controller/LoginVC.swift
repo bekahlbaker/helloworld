@@ -15,9 +15,7 @@ class LoginVC: UIViewController {
     @IBAction func signInWithFacebook(_ sender: Any) {
         // Perform Facebook Authentication
         // get user back and assign id
-        Login.withFacebook { (authorizedUser) in
-//            CurrentUser.id = authorizedUser.id
-        }
+
         performSegue(withIdentifier: "toMain", sender: self)
     }
     

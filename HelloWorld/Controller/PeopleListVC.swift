@@ -68,6 +68,10 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return PeopleCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = self.peopleList[indexPath.row]
         selectedPersonsName = person.fullName()

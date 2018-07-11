@@ -12,7 +12,7 @@ class AvatarImageView: UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = self.layer.frame.height / 2
         self.layer.masksToBounds = true
     }
 

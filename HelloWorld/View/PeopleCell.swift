@@ -15,14 +15,17 @@ class PeopleCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var hasChat: UIButton!
     
+    var userHasChatWithPerson = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     func configurePersonCell(_ user: User) -> Void {
-        name.text = user.fullName()
-//        let url = URL(string: user.imageUrl)!
-//        avatar.kf.setImage(with: url)
+        name.text = user.fullName().capitalized
+        guard let url = URL(string: user.picture.medium) else { return }
+        avatar.kf.setImage(with: url)
+        hasChat.setImage(userHasChatWithPerson ? UIImage(named: "messageIcon") : UIImage(named: "arrowIcon"), for: .normal)
     }
 }

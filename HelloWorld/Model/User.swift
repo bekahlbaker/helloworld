@@ -50,22 +50,30 @@ struct Result: Codable {
 
 struct User: Codable {
     var name: Name
-    
-    func encode() -> Data? {
-        let encodedUser = try? JSONEncoder().encode(self)
-        return encodedUser
-    }
-}
-
-extension User {
-    func fullName() -> String {
-        return "\(self.name.first) \(self.name.last)"
-    }
+    var picture: Picture
 }
 
 struct Name: Codable {
     var first: String
     var last: String
+}
+
+struct Picture: Codable {
+    var thumbnail: String
+    var medium: String
+    var large: String
+}
+
+
+extension User {
+    func fullName() -> String {
+        return "\(self.name.first) \(self.name.last)"
+    }
+    
+    func encode() -> Data? {
+        let encodedUser = try? JSONEncoder().encode(self)
+        return encodedUser
+    }
 }
 
 
