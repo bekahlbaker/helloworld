@@ -37,20 +37,20 @@ class ConversationCell: UITableViewCell {
         return myStringafd
     }
     
-    func getOtherUser(_ users: [User]) -> User {
-        let notCurrentUserArr = users.filter{$0.id != CurrentUser.id}
-        print(notCurrentUserArr[0].name)
-        return notCurrentUserArr[0]
-    }
+//    func getOtherUser(_ users: [User]) -> User {
+//        let notCurrentUserArr = users.filter{$0.id != CurrentUser.id}
+//        print(notCurrentUserArr[0].name)
+//        return notCurrentUserArr[0]
+//    }
 
     func configureConversationCell(with conversation: Conversation) -> Void {
-        let mostRecentMsgIndex = conversation.messages.count - 1
-        let mostRecentMsg = conversation.messages[mostRecentMsgIndex]
-        let otherUser = getOtherUser(conversation.users)
-        body.text = mostRecentMsg.content
-        timestamp.text = mostRecentMsg.timestamp.timeAgoDisplay()
-        let url = URL(string: otherUser.imageUrl)!
-        avatar.kf.setImage(with: url)
+//        let mostRecentMsgIndex = conversation.messages.count - 1
+//        let mostRecentMsg = conversation.messages[mostRecentMsgIndex]
+//        let otherUser = getOtherUser(conversation.users)
+//        body.text = mostRecentMsg.content
+//        timestamp.text = mostRecentMsg.timestamp.timeAgoDisplay()
+//        let url = URL(string: otherUser.imageUrl)!
+//        avatar.kf.setImage(with: url)
     }
     
 }

@@ -35,26 +35,57 @@ import UIKit
 //
 //}
 
-struct User {
+struct Result: Codable {
+    var users: [User]
     
-    let id: Int
-    let name: String
-    let imageUrl: String
-}
-
-extension User: Decodable {
-    enum MyStructKeys: String, CodingKey {
-        case id
-        case name
-        case imageUrl
+    enum CodingKeys: String, CodingKey {
+        case users = "results"
     }
     
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: MyStructKeys.self)
-        let id = try container.decode(Int.self, forKey: .id)
-        let name = try container.decode(String.self, forKey: .name)
-        let imageUrl = try container.decode(String.self, forKey: .imageUrl)
-        
-        self.init(id: id, name: name, imageUrl: imageUrl)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        users = try values.decode([User].self, forKey: .users)
     }
 }
+
+struct User: Codable {
+    var name: Name
+    
+    func encode() -> Data? {
+        let encodedUser = try? JSONEncoder().encode(self)
+        return encodedUser
+    }
+}
+
+extension User {
+    func fullName() -> String {
+        return "\(self.name.first) \(self.name.last)"
+    }
+}
+
+struct Name: Codable {
+    var first: String
+    var last: String
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

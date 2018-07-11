@@ -21,8 +21,8 @@ class PeopleCell: UITableViewCell {
     }
 
     func configurePersonCell(_ user: User) -> Void {
-        name.text = user.name
-        let url = URL(string: user.imageUrl)!
-        avatar.kf.setImage(with: url)
+        name.text = user.fullName()
+//        let url = URL(string: user.imageUrl)!
+//        avatar.kf.setImage(with: url)
     }
 }

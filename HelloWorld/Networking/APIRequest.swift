@@ -23,20 +23,12 @@ class APIRequest {
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
             
-            guard let _ = data else {
+            guard let dataResponse = data else {
                 completion(nil, error)
                 return
             }
-            
-            let json = """
-        {
-            "id": 1,
-            "name": "Sam McCrackin",
-            "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
-        }
-        """.data(using: .utf8)!
 
-            completion(json, nil)
+            completion(dataResponse, nil)
 
         })
         task.resume()
