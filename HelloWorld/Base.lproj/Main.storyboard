@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="2049" y="-361"/>
         </scene>
-        <!--People-->
+        <!--Users-->
         <scene sceneID="Ke3-lb-Qdf">
             <objects>
-                <viewController id="HCc-JT-4eH" customClass="PeopleListVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCc-JT-4eH" customClass="UserListVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eya-gK-Ijz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeopleCell" rowHeight="80" id="iZX-tl-bRa" customClass="PeopleCell" customModule="HelloWorld" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="80" id="iZX-tl-bRa" customClass="UserCell" customModule="HelloWorld" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iZX-tl-bRa" id="qmX-p6-Vix">
@@ -169,8 +169,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Phf-w5-W6e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" id="h7s-KP-nJM"/>
-                    <navigationItem key="navigationItem" title="People" id="y3i-Y9-F9Y"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="h7s-KP-nJM"/>
+                    <navigationItem key="navigationItem" title="Users" id="y3i-Y9-F9Y"/>
                     <connections>
                         <outlet property="searchbar" destination="Xlq-h4-h1b" id="PMh-1v-ezR"/>
                         <outlet property="tableview" destination="mjc-st-1lq" id="qzr-nh-ua1"/>
@@ -199,11 +199,11 @@
             </objects>
             <point key="canvasLocation" x="823" y="36"/>
         </scene>
-        <!--Chats-->
+        <!--Messages-->
         <scene sceneID="n5n-u6-89Z">
             <objects>
                 <navigationController id="kzb-lg-SuO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" id="Fue-cv-a0B"/>
+                    <tabBarItem key="tabBarItem" title="Messages" id="Fue-cv-a0B"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nc0-mX-j0x">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

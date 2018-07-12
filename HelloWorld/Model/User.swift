@@ -35,6 +35,10 @@ import UIKit
 //
 //}
 
+/*
+    Conforms to Codable protocol, based on the structure of the json returned
+    Is a results array of users with nested properties
+ */
 struct Result: Codable {
     var users: [User]
     
@@ -74,26 +78,9 @@ extension User {
         let encodedUser = try? JSONEncoder().encode(self)
         return encodedUser
     }
+    
+    func hasChatWith(user: User) -> Bool {
+        // Check thorugh current users chat list for other user's id
+        return true
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

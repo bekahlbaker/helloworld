@@ -14,7 +14,6 @@ import Foundation
     Path is the specific path of endpoint
     FullUrl combines base and path
     Method is HTTPRequest Method ie. GET, PUT, DELETE
-    makeModel accepts data returned from API and converts to specified model
 */
 
 protocol APIEndpoint {
