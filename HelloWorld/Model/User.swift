@@ -35,26 +35,58 @@ import UIKit
 //
 //}
 
-struct User {
+/*
+    Conforms to Codable protocol, based on the structure of the json returned
+    Is a results array of users with nested properties
+ */
+struct UserResult: Codable {
+    var users: [User]
     
-    let id: Int
-    let name: String
-    let imageUrl: String
+//    enum CodingKeys: String, CodingKey {
+//        case users = "results"
+//    }
+//    
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        users = try values.decode([User].self, forKey: .users)
+//    }
 }
 
-extension User: Decodable {
-    enum MyStructKeys: String, CodingKey {
-        case id
-        case name
-        case imageUrl
+struct User: Codable {
+    var id: String
+    var name: Name
+    var picture: Picture
+    var hasConversationsWith: [String]
+}
+
+struct Name: Codable {
+    var first: String
+    var last: String
+}
+
+struct Picture: Codable {
+    var thumbnail: String
+    var medium: String
+    var large: String
+}
+
+
+extension User {
+    func fullName() -> String {
+        return "\(self.name.first) \(self.name.last)"
     }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: MyStructKeys.self)
-        let id = try container.decode(Int.self, forKey: .id)
-        let name = try container.decode(String.self, forKey: .name)
-        let imageUrl = try container.decode(String.self, forKey: .imageUrl)
-        
-        self.init(id: id, name: name, imageUrl: imageUrl)
+    func encode() -> Data? {
+        let encodedUser = try? JSONEncoder().encode(self)
+        return encodedUser
+    }
+    
+    func hasChatWith(user: User) -> Bool {
+        // Check thorugh current users chat list for other user's id
+        if self.hasConversationsWith.contains(user.id) {
+            return true
+        } else {
+            return false
+        }
     }
 }

@@ -14,10 +14,11 @@ class LoginVC: UIViewController {
 
     @IBAction func signInWithFacebook(_ sender: Any) {
         // Perform Facebook Authentication
-        // get user back and assign id
-        Login.withFacebook { (authorizedUser) in
-            CurrentUser.id = authorizedUser.id
-        }
+        // get user back and set shared instance of user
+
+        let signedInUser = try? JSONDecoder().decode(User.self, from: FakeData.userJSON)
+        SharedData.sharedInstance.user = signedInUser
+        
         performSegue(withIdentifier: "toMain", sender: self)
     }
     

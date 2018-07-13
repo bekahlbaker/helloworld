@@ -14,7 +14,6 @@ import Foundation
     Path is the specific path of endpoint
     FullUrl combines base and path
     Method is HTTPRequest Method ie. GET, PUT, DELETE
-    makeModel accepts data returned from API and converts to specified model
 */
 
 protocol APIEndpoint {
@@ -59,6 +58,31 @@ extension UserEndpoints: APIEndpoint {
         case .getUsers:
             return "GET"
         case .loginWithFacebook:
+            return "POST"
+        }
+    }
+}
+
+enum ConversationEndpoints {
+    case getAllConversations
+    case postNewMessage
+}
+
+extension ConversationEndpoints: APIEndpoint {
+    var path: String {
+        switch self {
+        case .getAllConversations:
+            return "conversations"
+        case .postNewMessage:
+            return "newMessage"
+        }
+    }
+    
+    var method: String {
+        switch self {
+        case .getAllConversations:
+            return "GET"
+        case .postNewMessage:
             return "POST"
         }
     }
