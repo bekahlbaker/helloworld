@@ -14,7 +14,7 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     @IBOutlet weak var searchbar: UISearchBar!
     
     var userViewModels: [UserViewModel] = []
-    var selectedPersonsName: String!
+    var selectedUserViewModel: UserViewModel!
     
     // Networking
     fileprivate func loadUsers() {
@@ -25,7 +25,7 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                     return
                 }
                 
-                guard let results = try? JSONDecoder().decode(Result.self, from: dataReponse) else {
+                guard let results = try? JSONDecoder().decode(UserResult.self, from: FakeData.usersListJSON) else {
                     print("Can't make Result from data")
                     return
                 }
@@ -71,7 +71,7 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = self.userViewModels[indexPath.row]
-        selectedPersonsName = person.name
+        selectedUserViewModel = person
         performSegue(withIdentifier: "toDetail", sender: self)
     }
     
@@ -90,7 +90,7 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             if let vc = segue.destination as? MessageVC {
-             vc.chatWith = selectedPersonsName
+             vc.userViewModel = self.selectedUserViewModel
             }
         }
     }

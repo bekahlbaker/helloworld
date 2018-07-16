@@ -36,38 +36,20 @@ import UIKit
 //}
 
 /*
-    Conforms to Codable protocol, based on the structure of the json returned
-    Is a results array of users with nested properties
+ Conforms to Codable protocol, based on the structure of the json returned
+ Is a results array of users with nested properties
  */
-<<<<<<< HEAD
-struct Result: Codable {
-    var users: [User]
-    
-    enum CodingKeys: String, CodingKey {
-        case users = "results"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        users = try values.decode([User].self, forKey: .users)
-    }
-}
-
-struct User: Codable {
-    var name: Name
-    var picture: Picture
-=======
 struct UserResult: Codable {
     var users: [User]
     
-//    enum CodingKeys: String, CodingKey {
-//        case users = "results"
-//    }
-//    
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        users = try values.decode([User].self, forKey: .users)
-//    }
+    //    enum CodingKeys: String, CodingKey {
+    //        case users = "results"
+    //    }
+    //
+    //    init(from decoder: Decoder) throws {
+    //        let values = try decoder.container(keyedBy: CodingKeys.self)
+    //        users = try values.decode([User].self, forKey: .users)
+    //    }
 }
 
 struct User: Codable {
@@ -75,13 +57,11 @@ struct User: Codable {
     var name: Name
     var picture: Picture
     var hasConversationsWith: [String]
->>>>>>> peopleCell
 }
 
 struct Name: Codable {
     var first: String
     var last: String
-<<<<<<< HEAD
 }
 
 struct Picture: Codable {
@@ -90,32 +70,10 @@ struct Picture: Codable {
     var large: String
 }
 
-=======
-}
-
-struct Picture: Codable {
-    var thumbnail: String
-    var medium: String
-    var large: String
-}
-
->>>>>>> peopleCell
 
 extension User {
     func fullName() -> String {
         return "\(self.name.first) \(self.name.last)"
-<<<<<<< HEAD
-    }
-    
-    func encode() -> Data? {
-        let encodedUser = try? JSONEncoder().encode(self)
-        return encodedUser
-    }
-    
-    func hasChatWith(user: User) -> Bool {
-        // Check thorugh current users chat list for other user's id
-        return true
-=======
     }
     
     func encode() -> Data? {
@@ -130,6 +88,5 @@ extension User {
         } else {
             return false
         }
->>>>>>> peopleCell
     }
 }

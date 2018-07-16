@@ -15,17 +15,15 @@ class LoginVC: UIViewController {
     @IBAction func signInWithFacebook(_ sender: Any) {
         // Perform Facebook Authentication
         // get user back and set shared instance of user
-<<<<<<< HEAD
-        let signedInUser = User(name: Name(first: "Bob", last: "Vance"), picture: Picture(thumbnail: "", medium: "", large: ""))
-        SharedData.sharedInstance.user = signedInUser
+
+//        let signedInUser = User(name: Name(first: "Bob", last: "Vance"), picture: Picture(thumbnail: "", medium: "", large: ""))
+//        SharedData.sharedInstance.user = signedInUser
 
         performSegue(withIdentifier: "toMain", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-=======
->>>>>>> peopleCell
 
         let signedInUser = try? JSONDecoder().decode(User.self, from: FakeData.userJSON)
         SharedData.sharedInstance.user = signedInUser
