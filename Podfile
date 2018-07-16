@@ -7,6 +7,10 @@ target 'HelloWorld' do
 
   # Pods for HelloWorld
 	pod 'Kingfisher', '~> 4.0'
+ 	pod 'Firebase/Storage'
+  	pod 'Firebase/Auth'
+  	pod 'Firebase/Database'
+  	pod 'JSQMessagesViewController'
 
   target 'HelloWorldTests' do
     inherit! :search_paths

@@ -75,6 +75,16 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         performSegue(withIdentifier: "toDetail", sender: self)
     }
     
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        // Don't transform previously selected index or current
+////        if indexPath.row != previousSelectedRowIndex && indexPath.row != selectedRowIndex {
+//            cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+//            UIView.animate(withDuration: 0.5) {
+//                cell.transform = CGAffineTransform.identity
+//            }
+////        }
+//    }
+    
     //MARK: Searchbar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Searching", searchText)

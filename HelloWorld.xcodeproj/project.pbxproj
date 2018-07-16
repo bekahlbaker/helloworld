@@ -16,38 +16,25 @@
 		270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE120A488EB002B6907 /* ShadowView.swift */; };
 		270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE320A48991002B6907 /* RoundedButton.swift */; };
 		270B7B0920A4B1FA002B6907 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7B0820A4B1FA002B6907 /* User.swift */; };
+		27355FA020FD3F4900EC3264 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27355F9F20FD3F4100EC3264 /* GoogleService-Info.plist */; };
 		2735ABB220A61414005BC8D9 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABB120A61414005BC8D9 /* Conversation.swift */; };
 		2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABCE20AC72D9005BC8D9 /* FakeData.swift */; };
 		2735ABD220ACA7B4005BC8D9 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */; };
 		2740EDBB20FD1E67001991CF /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740EDBA20FD1E67001991CF /* UIKitExtensions.swift */; };
 		27774EA320A4C46800E82D96 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA220A4C46800E82D96 /* MessageVC.swift */; };
 		27774EA520A4C88D00E82D96 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA420A4C88D00E82D96 /* UserListVC.swift */; };
-<<<<<<< HEAD
-		27774EA720A4C8A700E82D96 /* ConversationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA620A4C8A700E82D96 /* ConversationListVC.swift */; };
 		27774EA920A4CFBF00E82D96 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA820A4CFBF00E82D96 /* UserCell.swift */; };
 		27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */; };
 		27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAE20A4DC8600E82D96 /* MessageCell.swift */; };
-		27774EB120A4DD2700E82D96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB020A4DD2700E82D96 /* Message.swift */; };
-		27774EB520A5F3BB00E82D96 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB420A5F3BB00E82D96 /* CurrentUser.swift */; };
-		27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB620A5F45300E82D96 /* ConversationCell.swift */; };
-=======
-		27774EA920A4CFBF00E82D96 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA820A4CFBF00E82D96 /* UserCell.swift */; };
-		27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */; };
-		27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAE20A4DC8600E82D96 /* MessageCell.swift */; };
->>>>>>> peopleCell
 		27838CF120F3F6CB006D3F47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */; };
 		27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CFC20F51275006D3F47 /* APIRequest.swift */; };
 		27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F520F7920C00C313A8 /* UserViewModel.swift */; };
 		27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F820F79BBE00C313A8 /* SharedData.swift */; };
-<<<<<<< HEAD
-		31580684746F0788C85E60BE /* Pods_HelloWorldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C225588DD0D9E06ECEFB1B8 /* Pods_HelloWorldUITests.framework */; };
-=======
 		27FEC94220F8E53E000AA151 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC94120F8E53E000AA151 /* HelloWorldTests.swift */; };
 		27FEC94A20F8EA6D000AA151 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC94920F8EA6D000AA151 /* UserTests.swift */; };
 		27FEC94C20F8EAA1000AA151 /* FakeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC94B20F8EAA1000AA151 /* FakeJSON.swift */; };
 		27FEC95520F93CEF000AA151 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC95420F93CEF000AA151 /* MessageViewModel.swift */; };
 		27FEC95720F945E7000AA151 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC95620F945E7000AA151 /* MessageView.swift */; };
->>>>>>> peopleCell
 		45D1549DCB24DFCDA3C38CCF /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBE42BACA2268E617AEF6F3 /* Pods_HelloWorld.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,31 +63,20 @@
 		270B7AE120A488EB002B6907 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		270B7AE320A48991002B6907 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		270B7B0820A4B1FA002B6907 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27355F9F20FD3F4100EC3264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2735ABB120A61414005BC8D9 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		2735ABCE20AC72D9005BC8D9 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		2740EDBA20FD1E67001991CF /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		27774EA220A4C46800E82D96 /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		27774EA420A4C88D00E82D96 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		27774EA620A4C8A700E82D96 /* ConversationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListVC.swift; sourceTree = "<group>"; };
 		27774EA820A4CFBF00E82D96 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		27774EAE20A4DC8600E82D96 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		27774EB020A4DD2700E82D96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		27774EB420A5F3BB00E82D96 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		27774EB620A5F45300E82D96 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
-=======
-		27774EA820A4CFBF00E82D96 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
-		27774EAE20A4DC8600E82D96 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
->>>>>>> peopleCell
 		27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		27838CFC20F51275006D3F47 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		27F3D3F520F7920C00C313A8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		27F3D3F820F79BBE00C313A8 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
 		27FEC93F20F8E53E000AA151 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FEC94120F8E53E000AA151 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		27FEC94320F8E53E000AA151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +84,6 @@
 		27FEC94B20F8EAA1000AA151 /* FakeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSON.swift; sourceTree = "<group>"; };
 		27FEC95420F93CEF000AA151 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		27FEC95620F945E7000AA151 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
->>>>>>> peopleCell
 		2FBE42BACA2268E617AEF6F3 /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3138B98FC73A98F9FED695E6 /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		5058C3D88FAF5B7617B67408 /* Pods_HelloWorldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +146,7 @@
 				270B7A6F20A332BF002B6907 /* Main.storyboard */,
 				270B7A7520A332C2002B6907 /* Assets.xcassets */,
 				270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */,
+				27355F9F20FD3F4100EC3264 /* GoogleService-Info.plist */,
 				270B7A7A20A332C2002B6907 /* Info.plist */,
 				270B7A7220A332BF002B6907 /* HelloWorld.xcdatamodeld */,
 			);
@@ -183,10 +159,6 @@
 				270B7A8320A33A30002B6907 /* LoginVC.swift */,
 				27774EA220A4C46800E82D96 /* MessageVC.swift */,
 				27774EA420A4C88D00E82D96 /* UserListVC.swift */,
-<<<<<<< HEAD
-				27774EA620A4C8A700E82D96 /* ConversationListVC.swift */,
-=======
->>>>>>> peopleCell
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,26 +190,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		27774E9720A4C00F00E82D96 /* HelloWorldTests */ = {
-			isa = PBXGroup;
-			children = (
-				27774E9820A4C00F00E82D96 /* HelloWorldTests.swift */,
-				27774E9A20A4C00F00E82D96 /* Info.plist */,
-			);
-			path = HelloWorldTests;
-			sourceTree = "<group>";
-		};
-		27774EB820A5F78000E82D96 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				2735ABCE20AC72D9005BC8D9 /* FakeData.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-=======
->>>>>>> peopleCell
 		27838CED20F3EE9C006D3F47 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,10 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				27F3D3F520F7920C00C313A8 /* UserViewModel.swift */,
-<<<<<<< HEAD
-=======
 				27FEC95420F93CEF000AA151 /* MessageViewModel.swift */,
->>>>>>> peopleCell
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -274,16 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				27F3D3F820F79BBE00C313A8 /* SharedData.swift */,
-<<<<<<< HEAD
-=======
 				2735ABCE20AC72D9005BC8D9 /* FakeData.swift */,
->>>>>>> peopleCell
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
 		27FEC94020F8E53E000AA151 /* HelloWorldTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +239,6 @@
 			path = HelloWorldTests;
 			sourceTree = "<group>";
 		};
->>>>>>> peopleCell
 		355B2B5D7B9709364A509841 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				270B7A7920A332C2002B6907 /* LaunchScreen.storyboard in Resources */,
+				27355FA020FD3F4900EC3264 /* GoogleService-Info.plist in Resources */,
 				270B7A7620A332C2002B6907 /* Assets.xcassets in Resources */,
 				270B7A7120A332BF002B6907 /* Main.storyboard in Resources */,
 			);
@@ -462,10 +406,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */,
-<<<<<<< HEAD
-				27774EA720A4C8A700E82D96 /* ConversationListVC.swift in Sources */,
-=======
->>>>>>> peopleCell
 				27774EA920A4CFBF00E82D96 /* UserCell.swift in Sources */,
 				27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */,
 				27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */,
@@ -486,10 +426,6 @@
 				27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */,
 				27774EA520A4C88D00E82D96 /* UserListVC.swift in Sources */,
 				27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */,
-<<<<<<< HEAD
-				27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */,
-=======
->>>>>>> peopleCell
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
