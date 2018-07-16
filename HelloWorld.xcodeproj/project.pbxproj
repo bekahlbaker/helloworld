@@ -132,7 +132,6 @@
 		270B7A6A20A332BF002B6907 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				2740EDBC20FD1F6D001991CF /* Extensions */,
 				27F3D3F720F79BB000C313A8 /* Utils */,
 				27838CEF20F3EED8006D3F47 /* Subclasses */,
 				27838CED20F3EE9C006D3F47 /* Networking */,
@@ -182,18 +181,10 @@
 		2735ABD020ACA7A3005BC8D9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2740EDBA20FD1E67001991CF /* UIKitExtensions.swift */,
 				2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2740EDBC20FD1F6D001991CF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2740EDBA20FD1E67001991CF /* UIKitExtensions.swift */,
-			);
-			name = Extensions;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		27838CED20F3EE9C006D3F47 /* Networking */ = {
