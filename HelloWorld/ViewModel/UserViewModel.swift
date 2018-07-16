@@ -15,7 +15,10 @@ struct UserViewModel {
     let name: String
     let imageURL: URL?
     let chatIconName: String
-    let hasConversationWIith: Bool
+    let hasConversationWith: Bool
+    let chatViewAlpha: CGFloat
+    let startConvoAlpha: CGFloat
+    let beginConversationWithUser: String
     
     // Dependency Injection
     init(user: User) {
@@ -23,10 +26,13 @@ struct UserViewModel {
         self.imageURL = URL(string: user.picture.medium)
         if let currentUser = SharedData.sharedInstance.user {
             self.chatIconName = currentUser.hasChatWith(user: user) ? "messageIcon" : "arrowIcon"
-            self.hasConversationWIith = currentUser.hasChatWith(user: user) ? true : false
+            self.hasConversationWith = currentUser.hasChatWith(user: user) ? true : false
         } else {
             self.chatIconName = "arrowIcon"
-            self.hasConversationWIith = false
+            self.hasConversationWith = false
         }
+        self.startConvoAlpha = self.hasConversationWith ? 0 : 1
+        self.chatViewAlpha = self.hasConversationWith ? 1 : 0
+        self.beginConversationWithUser = "Begin conversation with \(self.name)"
     }
 }

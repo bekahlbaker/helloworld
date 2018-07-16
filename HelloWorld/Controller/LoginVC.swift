@@ -19,17 +19,9 @@ class LoginVC: UIViewController {
         let signedInUser = try? JSONDecoder().decode(User.self, from: FakeData.userJSON)
         SharedData.sharedInstance.user = signedInUser
         
+        error.createErrorTextLabel(withString: "Hello Error")
+        
         performSegue(withIdentifier: "toMain", sender: self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        error.text = ""
-    }
-    
-    func setErrorText(to errorText: String = "") -> Void {
-        error.text = errorText
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

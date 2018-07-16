@@ -67,13 +67,12 @@ class MessageVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     func updateUI() {
         self.title = userViewModel.name
         avatar.kf.setImage(with: userViewModel.imageURL)
-        beginConversationView.alpha = userViewModel.hasConversationWIith ? 0 : 1
-        tableView.alpha = userViewModel.hasConversationWIith ? 1 : 0
-        beginConversationLabel.text = "Begin conversation with \(userViewModel.name)"
+        beginConversationView.alpha = userViewModel.startConvoAlpha
+        tableView.alpha = userViewModel.chatViewAlpha
+        beginConversationLabel.text = userViewModel.beginConversationWithUser
     }
     
     //MARK: TableView
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
