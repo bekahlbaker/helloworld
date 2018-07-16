@@ -1,5 +1,5 @@
 //
-//  PeopleListVC.swift
+//  UserListVC.swift
 //  HelloWorld
 //
 //  Created by Rebekah Baker on 5/10/18.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
     
-    var peopleList: [User] = []
+    var userViewModels: [UserViewModel] = []
     var selectedPersonsName: String!
     
     // Networking
@@ -30,8 +30,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     return
                 }
                 
-                self.peopleList = results.users
-                
+                self.userViewModels = results.users.map({ return UserViewModel(user: $0)})
                 self.tableview.reloadData()
                 
             } else {
@@ -51,35 +50,32 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     //MARK: Tableview
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return peopleList.count
+        return userViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell") as? PeopleCell {
-            let person = self.peopleList[indexPath.row]
-            print(person)
-            cell.configurePersonCell(person)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as? UserCell {
+            let userVM = self.userViewModels[indexPath.row]
+            cell.userViewModel = userVM
             
             return cell
         }
-        return PeopleCell()
+        return UserCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person = self.peopleList[indexPath.row]
-        selectedPersonsName = person.fullName()
+        let person = self.userViewModels[indexPath.row]
+        selectedPersonsName = person.name
         performSegue(withIdentifier: "toDetail", sender: self)
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
     //MARK: Searchbar
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Searching", searchText)
         // make API call to search - throttle

@@ -19,22 +19,22 @@
 		270B7AEC20A48A57002B6907 /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AEB20A48A57002B6907 /* HelloWorldUITests.swift */; };
 		270B7B0920A4B1FA002B6907 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7B0820A4B1FA002B6907 /* User.swift */; };
 		2735ABB220A61414005BC8D9 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABB120A61414005BC8D9 /* Conversation.swift */; };
-		2735ABB720A6297C005BC8D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABB620A6297C005BC8D9 /* API.swift */; };
 		2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABCE20AC72D9005BC8D9 /* FakeData.swift */; };
 		2735ABD220ACA7B4005BC8D9 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */; };
 		27774E9920A4C00F00E82D96 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774E9820A4C00F00E82D96 /* HelloWorldTests.swift */; };
 		27774EA320A4C46800E82D96 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA220A4C46800E82D96 /* MessageVC.swift */; };
-		27774EA520A4C88D00E82D96 /* PeopleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA420A4C88D00E82D96 /* PeopleListVC.swift */; };
+		27774EA520A4C88D00E82D96 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA420A4C88D00E82D96 /* UserListVC.swift */; };
 		27774EA720A4C8A700E82D96 /* ConversationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA620A4C8A700E82D96 /* ConversationListVC.swift */; };
-		27774EA920A4CFBF00E82D96 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA820A4CFBF00E82D96 /* PeopleCell.swift */; };
+		27774EA920A4CFBF00E82D96 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EA820A4CFBF00E82D96 /* UserCell.swift */; };
 		27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */; };
 		27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAE20A4DC8600E82D96 /* MessageCell.swift */; };
 		27774EB120A4DD2700E82D96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB020A4DD2700E82D96 /* Message.swift */; };
 		27774EB520A5F3BB00E82D96 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB420A5F3BB00E82D96 /* CurrentUser.swift */; };
 		27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EB620A5F45300E82D96 /* ConversationCell.swift */; };
-		27774EBC20A5F88B00E82D96 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EBB20A5F88B00E82D96 /* Login.swift */; };
 		27838CF120F3F6CB006D3F47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */; };
 		27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CFC20F51275006D3F47 /* APIRequest.swift */; };
+		27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F520F7920C00C313A8 /* UserViewModel.swift */; };
+		27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F820F79BBE00C313A8 /* SharedData.swift */; };
 		31580684746F0788C85E60BE /* Pods_HelloWorldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C225588DD0D9E06ECEFB1B8 /* Pods_HelloWorldUITests.framework */; };
 		45D1549DCB24DFCDA3C38CCF /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBE42BACA2268E617AEF6F3 /* Pods_HelloWorld.framework */; };
 /* End PBXBuildFile section */
@@ -75,24 +75,24 @@
 		270B7AED20A48A57002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270B7B0820A4B1FA002B6907 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2735ABB120A61414005BC8D9 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		2735ABB620A6297C005BC8D9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2735ABCE20AC72D9005BC8D9 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		2735ABD120ACA7B4005BC8D9 /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		27774E9620A4C00F00E82D96 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27774E9820A4C00F00E82D96 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		27774E9A20A4C00F00E82D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27774EA220A4C46800E82D96 /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
-		27774EA420A4C88D00E82D96 /* PeopleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListVC.swift; sourceTree = "<group>"; };
+		27774EA420A4C88D00E82D96 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		27774EA620A4C8A700E82D96 /* ConversationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListVC.swift; sourceTree = "<group>"; };
-		27774EA820A4CFBF00E82D96 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
+		27774EA820A4CFBF00E82D96 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		27774EAC20A4D6A800E82D96 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		27774EAE20A4DC8600E82D96 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		27774EB020A4DD2700E82D96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		27774EB420A5F3BB00E82D96 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		27774EB620A5F45300E82D96 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
-		27774EBB20A5F88B00E82D96 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		27838CFC20F51275006D3F47 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		27F3D3F520F7920C00C313A8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		27F3D3F820F79BBE00C313A8 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		2FBE42BACA2268E617AEF6F3 /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3138B98FC73A98F9FED695E6 /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		5058C3D88FAF5B7617B67408 /* Pods_HelloWorldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +154,7 @@
 		270B7A6A20A332BF002B6907 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				27F3D3F720F79BB000C313A8 /* Utils */,
 				27838CEF20F3EED8006D3F47 /* Subclasses */,
 				27838CED20F3EE9C006D3F47 /* Networking */,
 				2735ABD020ACA7A3005BC8D9 /* Extensions */,
@@ -177,7 +178,7 @@
 			children = (
 				270B7A8320A33A30002B6907 /* LoginVC.swift */,
 				27774EA220A4C46800E82D96 /* MessageVC.swift */,
-				27774EA420A4C88D00E82D96 /* PeopleListVC.swift */,
+				27774EA420A4C88D00E82D96 /* UserListVC.swift */,
 				27774EA620A4C8A700E82D96 /* ConversationListVC.swift */,
 			);
 			path = Controller;
@@ -186,7 +187,7 @@
 		270B7A8120A33A05002B6907 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				27774EA820A4CFBF00E82D96 /* PeopleCell.swift */,
+				27774EA820A4CFBF00E82D96 /* UserCell.swift */,
 				27774EAE20A4DC8600E82D96 /* MessageCell.swift */,
 				27774EB620A5F45300E82D96 /* ConversationCell.swift */,
 			);
@@ -233,8 +234,6 @@
 		27774EB820A5F78000E82D96 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				27774EBB20A5F88B00E82D96 /* Login.swift */,
-				2735ABB620A6297C005BC8D9 /* API.swift */,
 				2735ABCE20AC72D9005BC8D9 /* FakeData.swift */,
 			);
 			path = Services;
@@ -252,6 +251,7 @@
 		27838CEE20F3EEAC006D3F47 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27F3D3F520F7920C00C313A8 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,6 +264,14 @@
 				270B7AE120A488EB002B6907 /* ShadowView.swift */,
 			);
 			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		27F3D3F720F79BB000C313A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				27F3D3F820F79BBE00C313A8 /* SharedData.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		355B2B5D7B9709364A509841 /* Pods */ = {
@@ -501,7 +509,7 @@
 			files = (
 				270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */,
 				27774EA720A4C8A700E82D96 /* ConversationListVC.swift in Sources */,
-				27774EA920A4CFBF00E82D96 /* PeopleCell.swift in Sources */,
+				27774EA920A4CFBF00E82D96 /* UserCell.swift in Sources */,
 				27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */,
 				27774EAD20A4D6A800E82D96 /* AvatarImageView.swift in Sources */,
 				270B7AE420A48991002B6907 /* RoundedButton.swift in Sources */,
@@ -517,10 +525,10 @@
 				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,
 				27774EB520A5F3BB00E82D96 /* CurrentUser.swift in Sources */,
 				2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */,
-				27774EA520A4C88D00E82D96 /* PeopleListVC.swift in Sources */,
+				27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */,
+				27774EA520A4C88D00E82D96 /* UserListVC.swift in Sources */,
+				27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */,
 				27774EB720A5F45300E82D96 /* ConversationCell.swift in Sources */,
-				2735ABB720A6297C005BC8D9 /* API.swift in Sources */,
-				27774EBC20A5F88B00E82D96 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

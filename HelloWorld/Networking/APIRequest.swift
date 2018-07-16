@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /*
- Make request to specified endpoint and returns model specified by that endpoint
+ Make request to specified endpoint and returns data to be decoded by that model
  */
 
 class APIRequest {
