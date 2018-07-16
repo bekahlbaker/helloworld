@@ -62,3 +62,28 @@ extension UserEndpoints: APIEndpoint {
         }
     }
 }
+
+enum ConversationEndpoints {
+    case getAllConversations
+    case postNewMessage
+}
+
+extension ConversationEndpoints: APIEndpoint {
+    var path: String {
+        switch self {
+        case .getAllConversations:
+            return "conversations"
+        case .postNewMessage:
+            return "newMessage"
+        }
+    }
+    
+    var method: String {
+        switch self {
+        case .getAllConversations:
+            return "GET"
+        case .postNewMessage:
+            return "POST"
+        }
+    }
+}

@@ -9,34 +9,20 @@
 import UIKit
 
 class MessageCell: UITableViewCell {
-    
-    @IBOutlet weak var avatar: AvatarImageView!
-    @IBOutlet weak var body: UILabel!
-    @IBOutlet weak var timestamp: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    func configureMessageCell(_ message: Message) -> Void {
-        body.text = message.content
-//        timestamp.text = message.timestamp
-    }
+    @IBOutlet weak var messageBackground: UIView!
+    @IBOutlet weak var message: UILabel!
     
-    // Set up Kingfisher or something to cache images
-    func loadImage(_ url: String) {
-        DispatchQueue.global().async { [weak self] in
-            if let imageUrl = URL(string: url) {
-                if let data = try? Data(contentsOf: imageUrl) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.avatar.image = image
-                        }
-                    }
-                }
-            }
+    @IBOutlet weak var leadingMessageConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingMessageConstraint: NSLayoutConstraint!
+    
+    var messageViewModel: MessageViewModel! {
+        didSet {
+            message.text = messageViewModel.message
+            leadingMessageConstraint.constant = messageViewModel.leadingConstant
+            trailingMessageConstraint.constant = messageViewModel.trailingConstant
+            message.textAlignment = messageViewModel.textAlignment
+            messageBackground.backgroundColor = messageViewModel.backgroundColor
         }
     }
-
 }

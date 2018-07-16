@@ -15,6 +15,7 @@ class LoginVC: UIViewController {
     @IBAction func signInWithFacebook(_ sender: Any) {
         // Perform Facebook Authentication
         // get user back and set shared instance of user
+<<<<<<< HEAD
         let signedInUser = User(name: Name(first: "Bob", last: "Vance"), picture: Picture(thumbnail: "", medium: "", large: ""))
         SharedData.sharedInstance.user = signedInUser
 
@@ -23,12 +24,15 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+=======
+>>>>>>> peopleCell
 
-        error.text = ""
-    }
-    
-    func setErrorText(to errorText: String = "") -> Void {
-        error.text = errorText
+        let signedInUser = try? JSONDecoder().decode(User.self, from: FakeData.userJSON)
+        SharedData.sharedInstance.user = signedInUser
+        
+        error.createErrorTextLabel(withString: "Hello Error")
+        
+        performSegue(withIdentifier: "toMain", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
