@@ -49,9 +49,9 @@ class ConversationListVC: UIViewController, UITableViewDataSource, UITableViewDe
         selectedConversation = self.conversations[indexPath.row]
         if let cell: ConversationCell = tableView.cellForRow(at: indexPath) as? ConversationCell {
             if let users = self.conversations[indexPath.row].users {
-                let person = cell.getOtherUser(users)
-                selectedPersonsName = person.name
-                performSegue(withIdentifier: "toDetail", sender: self)
+//                let person = cell.getOtherUser(users)
+//                selectedPersonsName = person.name
+//                performSegue(withIdentifier: "toDetail", sender: self)
             }
         }
     }

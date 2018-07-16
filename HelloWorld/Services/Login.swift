@@ -28,26 +28,5 @@ class Login {
         // Make call to login on facebook
         // On success, return a user
         // On failure, return an error
-        let loginSuccessful = true
-        let json = [
-            "id": 1,
-            "name": "Sam McCrackin",
-            "imageUrl": "https://cdn.gratisography.com/photos/447H.jpg"
-            ] as [String : Any]
-        let newUser = User(json)
-        
-        if loginSuccessful {
-            completion(newUser)
-        }
-    }
-    
-    
-//    static func getBoolValue(number : Int, completion: (Bool)->()) {
-//        if number > 5 {
-//            completion(true)
-//        } else {
-//            completion(false)
-//        }
-//    }
-    
+    } 
 }

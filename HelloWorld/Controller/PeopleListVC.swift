@@ -16,6 +16,30 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var peopleList: [User] = []
     var selectedPersonsName: String!
     
+    // Networking
+    fileprivate func loadUsers() {
+        APIRequest.makeRequestTo(endpoint: UserEndpoints.getUsers(countOf: 3)) { (data, error) in
+            if data != nil {
+                guard let dataReponse = data else {
+                    print("Corrupted data")
+                    return
+                }
+                
+                guard let results = try? JSONDecoder().decode(Result.self, from: dataReponse) else {
+                    print("Can't make Result from data")
+                    return
+                }
+                
+                self.peopleList = results.users
+                
+                self.tableview.reloadData()
+                
+            } else {
+                print("NOPE", error ?? "")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +47,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableview.dataSource = self
         searchbar.delegate = self
 
-        for person in FakeData.people {
-            peopleList.append(User(person))
-        }
-        
-        tableview.reloadData()
+        loadUsers()
     }
     
     //MARK: Tableview
@@ -40,6 +60,7 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell") as? PeopleCell {
             let person = self.peopleList[indexPath.row]
+            print(person)
             cell.configurePersonCell(person)
             
             return cell
@@ -49,8 +70,12 @@ class PeopleListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = self.peopleList[indexPath.row]
-        selectedPersonsName = person.name
+        selectedPersonsName = person.fullName()
         performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     //MARK: Searchbar

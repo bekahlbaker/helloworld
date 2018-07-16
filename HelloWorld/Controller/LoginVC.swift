@@ -16,7 +16,7 @@ class LoginVC: UIViewController {
         // Perform Facebook Authentication
         // get user back and assign id
         Login.withFacebook { (authorizedUser) in
-            CurrentUser.id = authorizedUser.id
+//            CurrentUser.id = authorizedUser.id
         }
         performSegue(withIdentifier: "toMain", sender: self)
     }
