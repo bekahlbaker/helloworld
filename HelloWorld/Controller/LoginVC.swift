@@ -41,6 +41,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     // MARK: TextField
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.critterView.isSad = false
+        
         let deadlineTime = DispatchTime.now() + .milliseconds(100)
         
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) { // 🎩✨ Magic to ensure animation starts

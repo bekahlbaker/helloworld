@@ -24,15 +24,15 @@ final class Mouth: UIImageView, CritterAnimatable {
     
     // MARK: - CritterAnimatable
 
-    func currentState() -> SavedState {
-        let currentState = layer.transform
-
-        return {
-            self.layer.transform = currentState
-            self.isActive = true
-            self.applyEcstaticState()
-        }
-    }
+//    func currentState() -> SavedState {
+//        let currentState = layer.transform
+//
+//        return {
+//            self.layer.transform = currentState
+//            self.isActive = true
+//            self.applyEcstaticState()
+//        }
+//    }
 
     func applyInactiveState() {
         layer.transform = .identity

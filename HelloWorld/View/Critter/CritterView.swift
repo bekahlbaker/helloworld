@@ -18,6 +18,7 @@ final class CritterView: UIView {
     var isEcstatic: Bool = false {
         didSet {
             mouth.isEcstatic = isEcstatic
+//            rightEye.isSad = isSad
             if oldValue != isEcstatic {
                 ecstaticAnimation()
             }
@@ -43,6 +44,7 @@ final class CritterView: UIView {
     var isSad: Bool = false {
         didSet {
             mouth.isSad = isSad
+//            rightEye.isSad = isSad
             guard oldValue != isSad else { return }
             sadAnimation()
         }
@@ -203,6 +205,7 @@ final class CritterView: UIView {
         let duration = 0.125
         let ecstaticAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeIn) {
             self.mouth.applyEcstaticState()
+//            self.rightEye.applySadState()
         }
         
         ecstaticAnimator.startAnimation()

@@ -48,4 +48,8 @@ final class RightEye: UIImageView, CritterAnimatable {
             .translate(.y, by: p2.y - p1.y)
     }
     
+    func applySadState() {
+        layer.contents = UIImage.Critter.eyeSad.cgImage
+        layer.bounds = CGRect(x: 0, y: 0, width: 17, height: 26)
+    }
 }
