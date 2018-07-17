@@ -43,19 +43,27 @@
                                     <constraint firstAttribute="height" constant="45" id="rok-fh-sRh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Login Anonymously">
+                                <state key="normal" title="Begin chatting...">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMl-u3-oaw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-dj-0Wu">
-                                <rect key="frame" x="138" y="44" width="98" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-dj-0Wu">
+                                <rect key="frame" x="77" y="44" width="220" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjk-wp-h1O" customClass="CritterView" customModule="HelloWorld" customModuleProvider="target">
+                                <rect key="frame" x="107" y="106" width="160" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="fSB-V1-wvv"/>
+                                    <constraint firstAttribute="width" constant="160" id="nJ8-rx-K6P"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.82352941180000006" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,11 +74,14 @@
                             <constraint firstItem="Yj0-dj-0Wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OYw-eJ-UUt"/>
                             <constraint firstItem="42a-m4-tpI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qou-nb-AZA"/>
                             <constraint firstItem="Gef-WY-jLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TVI-Cg-wRZ"/>
+                            <constraint firstItem="wjk-wp-h1O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYH-7R-a84"/>
+                            <constraint firstItem="wi1-9C-MBn" firstAttribute="top" secondItem="wjk-wp-h1O" secondAttribute="bottom" constant="45" id="jCp-c8-1Ok"/>
                             <constraint firstItem="wi1-9C-MBn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ljj-2m-0JL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="critterView" destination="wjk-wp-h1O" id="9Gp-sB-Jk1"/>
                         <outlet property="error" destination="42a-m4-tpI" id="QmX-DL-9Ij"/>
                         <outlet property="usernameTextField" destination="wi1-9C-MBn" id="lWV-sP-FnV"/>
                         <segue destination="5FQ-bh-F1j" kind="show" identifier="toMain" id="nGm-Ig-shI"/>
