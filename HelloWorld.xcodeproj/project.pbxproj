@@ -10,7 +10,6 @@
 		270B7A6C20A332BF002B6907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A6B20A332BF002B6907 /* AppDelegate.swift */; };
 		270B7A7120A332BF002B6907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A6F20A332BF002B6907 /* Main.storyboard */; };
 		270B7A7420A332BF002B6907 /* HelloWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A7220A332BF002B6907 /* HelloWorld.xcdatamodeld */; };
-		270B7A7620A332C2002B6907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7520A332C2002B6907 /* Assets.xcassets */; };
 		270B7A7920A332C2002B6907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */; };
 		270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7A8320A33A30002B6907 /* LoginVC.swift */; };
 		270B7AE220A488EB002B6907 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B7AE120A488EB002B6907 /* ShadowView.swift */; };
@@ -48,6 +47,8 @@
 		27B4127020FE407B00C5A108 /* LeftEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4126020FE407B00C5A108 /* LeftEar.swift */; };
 		27B4127120FE407B00C5A108 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4126120FE407B00C5A108 /* Body.swift */; };
 		27B4127220FE407B00C5A108 /* RightEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4126220FE407B00C5A108 /* RightEar.swift */; };
+		27B4127420FE46CB00C5A108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B4127320FE46CB00C5A108 /* Assets.xcassets */; };
+		27B4127820FE651500C5A108 /* Tear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4127720FE651500C5A108 /* Tear.swift */; };
 		27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F520F7920C00C313A8 /* UserViewModel.swift */; };
 		27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F820F79BBE00C313A8 /* SharedData.swift */; };
 		27FEC94220F8E53E000AA151 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC94120F8E53E000AA151 /* HelloWorldTests.swift */; };
@@ -76,7 +77,6 @@
 		270B7A6B20A332BF002B6907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		270B7A7020A332BF002B6907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		270B7A7320A332BF002B6907 /* HelloWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HelloWorld.xcdatamodel; sourceTree = "<group>"; };
-		270B7A7520A332C2002B6907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		270B7A7820A332C2002B6907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		270B7A7A20A332C2002B6907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270B7A8320A33A30002B6907 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		27B4126020FE407B00C5A108 /* LeftEar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftEar.swift; sourceTree = "<group>"; };
 		27B4126120FE407B00C5A108 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
 		27B4126220FE407B00C5A108 /* RightEar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightEar.swift; sourceTree = "<group>"; };
+		27B4127320FE46CB00C5A108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27B4127720FE651500C5A108 /* Tear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tear.swift; sourceTree = "<group>"; };
 		27F3D3F520F7920C00C313A8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		27F3D3F820F79BBE00C313A8 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		27FEC93F20F8E53E000AA151 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +187,7 @@
 				270B7A8020A339F6002B6907 /* Controller */,
 				270B7A6B20A332BF002B6907 /* AppDelegate.swift */,
 				270B7A6F20A332BF002B6907 /* Main.storyboard */,
-				270B7A7520A332C2002B6907 /* Assets.xcassets */,
+				27B4127320FE46CB00C5A108 /* Assets.xcassets */,
 				270B7A7720A332C2002B6907 /* LaunchScreen.storyboard */,
 				27355F9F20FD3F4100EC3264 /* GoogleService-Info.plist */,
 				270B7A7A20A332C2002B6907 /* Info.plist */,
@@ -299,6 +301,7 @@
 				27B4126020FE407B00C5A108 /* LeftEar.swift */,
 				27B4126120FE407B00C5A108 /* Body.swift */,
 				27B4126220FE407B00C5A108 /* RightEar.swift */,
+				27B4127720FE651500C5A108 /* Tear.swift */,
 			);
 			path = Parts;
 			sourceTree = "<group>";
@@ -431,7 +434,7 @@
 			files = (
 				270B7A7920A332C2002B6907 /* LaunchScreen.storyboard in Resources */,
 				27355FA020FD3F4900EC3264 /* GoogleService-Info.plist in Resources */,
-				270B7A7620A332C2002B6907 /* Assets.xcassets in Resources */,
+				27B4127420FE46CB00C5A108 /* Assets.xcassets in Resources */,
 				270B7A7120A332BF002B6907 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +515,7 @@
 				27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */,
 				27B4125020FE3E8100C5A108 /* UIColors+ColorPallete.swift in Sources */,
 				27B4126620FE407B00C5A108 /* RightEye.swift in Sources */,
+				27B4127820FE651500C5A108 /* Tear.swift in Sources */,
 				2740EDBB20FD1E67001991CF /* UIKitExtensions.swift in Sources */,
 				27B4126F20FE407B00C5A108 /* LeftArm.swift in Sources */,
 				2735ABD220ACA7B4005BC8D9 /* TimeAgo.swift in Sources */,

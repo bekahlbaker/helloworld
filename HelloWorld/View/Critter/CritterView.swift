@@ -39,6 +39,14 @@ final class CritterView: UIView {
             togglePeekingState()
         }
     }
+    
+    var isSad: Bool = false {
+        didSet {
+            mouth.isSad = isSad
+            guard oldValue != isSad else { return }
+            sadAnimation()
+        }
+    }
 
     private let body = Body()
     private let head = Head()
@@ -188,6 +196,15 @@ final class CritterView: UIView {
             self.mouth.applyEcstaticState()
         }
 
+        ecstaticAnimator.startAnimation()
+    }
+    
+    private func sadAnimation() {
+        let duration = 0.125
+        let ecstaticAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeIn) {
+            self.mouth.applyEcstaticState()
+        }
+        
         ecstaticAnimator.startAnimation()
     }
 

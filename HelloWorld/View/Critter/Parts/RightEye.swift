@@ -9,6 +9,8 @@
 import UIKit
 
 final class RightEye: UIImageView, CritterAnimatable {
+    
+    var isSad: Bool = false
 
     private let p1 = CGPoint(x: 72.4, y: 28.8)
     private let p2 = CGPoint(x: 62.1, y: 41.1)
@@ -45,4 +47,5 @@ final class RightEye: UIImageView, CritterAnimatable {
             .translate(.x, by: -(p2.x - p1.x))
             .translate(.y, by: p2.y - p1.y)
     }
+    
 }

@@ -10,6 +10,7 @@ import UIKit
 
 final class Body: UIImageView, CritterAnimatable {
     
+    
     convenience init() {
         self.init(image: UIImage.Critter.body)
         layer.zPosition = -30

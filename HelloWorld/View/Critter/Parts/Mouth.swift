@@ -11,6 +11,7 @@ import UIKit
 final class Mouth: UIImageView, CritterAnimatable {
 
     var isEcstatic = false
+    var isSad = false
 
     private var isActive = false
     private let p1 = CGPoint(x: 13.7, y: 24.9)
@@ -64,7 +65,10 @@ final class Mouth: UIImageView, CritterAnimatable {
         }
         else if isActive {
             layer.contents = UIImage.Critter.mouthHalf.cgImage
-            layer.bounds = CGRect(x: 0, y: 0, width: 26.6, height: 13.7)
+            layer.bounds = CGRect(x: 0, y: 0, width: 26.6, height: 11.7)
+        } else if isSad {
+            layer.contents = UIImage.Critter.mouthSad.cgImage
+            layer.bounds = CGRect(x: 0, y: 0, width: 26.6, height: 11)
         }
         else {
             UIView.transition(with: self,

@@ -57,10 +57,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
-            if textField.text != "" {
+            if (textField.text?.count)! >= 8 {
                 critterView.isEcstatic = true
+                critterView.isSad = false
             } else {
                 critterView.isEcstatic = false
+                critterView.isSad = true
                 critterView.stopHeadRotation()
             }
         }
@@ -75,7 +77,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         critterView.updateHeadRotation(to: fractionComplete)
         
         if let text = textField.text {
-            critterView.isEcstatic = text.range(of: "@") != nil
+            critterView.isEcstatic = text.count >= 8
         }
     }
     
