@@ -51,14 +51,24 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Pods-HelloWorld.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-HelloWorldTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-HelloWorldUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
