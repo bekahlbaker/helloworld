@@ -10,25 +10,13 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var error: UILabel!
-
-    @IBAction func signInWithFacebook(_ sender: Any) {
-        // Perform Facebook Authentication
-        // get user back and set shared instance of user
-
-//        let signedInUser = User(name: Name(first: "Bob", last: "Vance"), picture: Picture(thumbnail: "", medium: "", large: ""))
-//        SharedData.sharedInstance.user = signedInUser
-
-        performSegue(withIdentifier: "toMain", sender: self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        Firebase.loginAnonymously()
+        
         let signedInUser = try? JSONDecoder().decode(User.self, from: FakeData.userJSON)
         SharedData.sharedInstance.user = signedInUser
-        
-        error.createErrorTextLabel(withString: "Hello Error")
         
         performSegue(withIdentifier: "toMain", sender: self)
     }

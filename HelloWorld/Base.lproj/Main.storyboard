@@ -19,46 +19,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-dj-0Wu">
-                                <rect key="frame" x="139" y="310" width="98" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91x-gR-dgA" customClass="RoundedButton" customModule="HelloWorld" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="547" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CKv-lF-SLp"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rWZ-o4-Zl2"/>
-                                </constraints>
-                                <state key="normal" title="Sign In With Facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="signInWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWN-bP-qaU"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42a-m4-tpI">
-                                <rect key="frame" x="186" y="496" width="3.5" height="16"/>
+                                <rect key="frame" x="186" y="360" width="3.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <color key="textColor" red="0.82352941176470584" green="0.27058823529411763" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wi1-9C-MBn">
+                                <rect key="frame" x="37.5" y="311" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7D3-4k-qUY"/>
+                                    <constraint firstAttribute="width" constant="300" id="OFE-SB-FpL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-WY-jLf" customClass="RoundedButton" customModule="HelloWorld" customModuleProvider="target">
+                                <rect key="frame" x="88" y="384" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.84857666490000005" blue="0.79556155200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="elo-Bh-aW1"/>
+                                    <constraint firstAttribute="height" constant="45" id="rok-fh-sRh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Login Anonymously">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMl-u3-oaw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-dj-0Wu">
+                                <rect key="frame" x="138" y="44" width="98" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.82352941180000006" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yj0-dj-0Wu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hbl-Um-Mj6"/>
-                            <constraint firstItem="91x-gR-dgA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jyg-JA-OOH"/>
+                            <constraint firstItem="wi1-9C-MBn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0qB-d2-uND"/>
+                            <constraint firstItem="Gef-WY-jLf" firstAttribute="top" secondItem="42a-m4-tpI" secondAttribute="bottom" constant="8" id="DZk-wE-ZCG"/>
+                            <constraint firstItem="Yj0-dj-0Wu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="MEv-pP-qwQ"/>
+                            <constraint firstItem="42a-m4-tpI" firstAttribute="top" secondItem="wi1-9C-MBn" secondAttribute="bottom" constant="4" id="Nwo-pf-b96"/>
+                            <constraint firstItem="Yj0-dj-0Wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OYw-eJ-UUt"/>
                             <constraint firstItem="42a-m4-tpI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qou-nb-AZA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="91x-gR-dgA" secondAttribute="bottom" constant="70" id="ZJi-TO-SiH"/>
-                            <constraint firstItem="Yj0-dj-0Wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y6w-Y3-k72"/>
-                            <constraint firstItem="91x-gR-dgA" firstAttribute="top" secondItem="42a-m4-tpI" secondAttribute="bottom" constant="35" id="yGr-Gw-66I"/>
+                            <constraint firstItem="Gef-WY-jLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TVI-Cg-wRZ"/>
+                            <constraint firstItem="wi1-9C-MBn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ljj-2m-0JL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="error" destination="42a-m4-tpI" id="QmX-DL-9Ij"/>
+                        <outlet property="usernameTextField" destination="wi1-9C-MBn" id="lWV-sP-FnV"/>
                         <segue destination="5FQ-bh-F1j" kind="show" identifier="toMain" id="nGm-Ig-shI"/>
                     </connections>
                 </viewController>
@@ -181,10 +195,8 @@
             </objects>
             <point key="canvasLocation" x="3000.8000000000002" y="-361.16941529235385"/>
         </scene>
-
         <!--MessageVC-->
         <scene sceneID="p7p-IN-vNF">
->>>>>>> peopleCell
             <objects>
                 <viewController id="nEx-LQ-P9X" customClass="MessageVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FxD-xg-T2U">

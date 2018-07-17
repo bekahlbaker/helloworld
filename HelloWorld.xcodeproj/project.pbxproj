@@ -28,6 +28,7 @@
 		27774EAF20A4DC8600E82D96 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27774EAE20A4DC8600E82D96 /* MessageCell.swift */; };
 		27838CF120F3F6CB006D3F47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */; };
 		27838CFD20F51275006D3F47 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27838CFC20F51275006D3F47 /* APIRequest.swift */; };
+		27B4124920FD44BE00C5A108 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4124820FD44BE00C5A108 /* Firebase.swift */; };
 		27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F520F7920C00C313A8 /* UserViewModel.swift */; };
 		27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3D3F820F79BBE00C313A8 /* SharedData.swift */; };
 		27FEC94220F8E53E000AA151 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC94120F8E53E000AA151 /* HelloWorldTests.swift */; };
@@ -75,6 +76,7 @@
 		27774EAE20A4DC8600E82D96 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		27838CFC20F51275006D3F47 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		27B4124820FD44BE00C5A108 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		27F3D3F520F7920C00C313A8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		27F3D3F820F79BBE00C313A8 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		27FEC93F20F8E53E000AA151 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 			children = (
 				27838CF020F3F6CB006D3F47 /* APIEndpoint.swift */,
 				27838CFC20F51275006D3F47 /* APIRequest.swift */,
+				27B4124820FD44BE00C5A108 /* Firebase.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -387,11 +390,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,6 +434,7 @@
 				27FEC95520F93CEF000AA151 /* MessageViewModel.swift in Sources */,
 				270B7A8420A33A30002B6907 /* LoginVC.swift in Sources */,
 				2735ABCF20AC72D9005BC8D9 /* FakeData.swift in Sources */,
+				27B4124920FD44BE00C5A108 /* Firebase.swift in Sources */,
 				27F3D3F920F79BBE00C313A8 /* SharedData.swift in Sources */,
 				27774EA520A4C88D00E82D96 /* UserListVC.swift in Sources */,
 				27F3D3F620F7920C00C313A8 /* UserViewModel.swift in Sources */,
